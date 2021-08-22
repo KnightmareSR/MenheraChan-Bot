@@ -1,0 +1,24 @@
+C:\Users\Chris\source\repos\The New Bot\The New Bot\bin\Debug\netcoreapp3.1\The New Bot.exe
+C:\Users\Chris\source\repos\The New Bot\The New Bot\bin\Debug\netcoreapp3.1\The New Bot.deps.json
+C:\Users\Chris\source\repos\The New Bot\The New Bot\bin\Debug\netcoreapp3.1\The New Bot.runtimeconfig.json
+C:\Users\Chris\source\repos\The New Bot\The New Bot\bin\Debug\netcoreapp3.1\The New Bot.runtimeconfig.dev.json
+C:\Users\Chris\source\repos\The New Bot\The New Bot\bin\Debug\netcoreapp3.1\The New Bot.dll
+C:\Users\Chris\source\repos\The New Bot\The New Bot\bin\Debug\netcoreapp3.1\The New Bot.pdb
+C:\Users\Chris\source\repos\The New Bot\The New Bot\obj\Debug\netcoreapp3.1\The New Bot.csproj.AssemblyReference.cache
+C:\Users\Chris\source\repos\The New Bot\The New Bot\obj\Debug\netcoreapp3.1\The New Bot.AssemblyInfoInputs.cache
+C:\Users\Chris\source\repos\The New Bot\The New Bot\obj\Debug\netcoreapp3.1\The New Bot.AssemblyInfo.cs
+C:\Users\Chris\source\repos\The New Bot\The New Bot\obj\Debug\netcoreapp3.1\The New Bot.csproj.CoreCompileInputs.cache
+C:\Users\Chris\source\repos\The New Bot\The New Bot\obj\Debug\netcoreapp3.1\The New Bot.dll
+C:\Users\Chris\source\repos\The New Bot\The New Bot\obj\Debug\netcoreapp3.1\The New Bot.pdb
+C:\Users\Chris\source\repos\The New Bot\The New Bot\obj\Debug\netcoreapp3.1\The New Bot.genruntimeconfig.cache
+C:\Users\Chris\source\repos\The New Bot\The New Bot\bin\Debug\netcoreapp3.1\Discord.Net.Commands.dll
+C:\Users\Chris\source\repos\The New Bot\The New Bot\bin\Debug\netcoreapp3.1\Discord.Net.Core.dll
+C:\Users\Chris\source\repos\The New Bot\The New Bot\bin\Debug\netcoreapp3.1\Discord.Net.Rest.dll
+C:\Users\Chris\source\repos\The New Bot\The New Bot\bin\Debug\netcoreapp3.1\Discord.Net.Webhook.dll
+C:\Users\Chris\source\repos\The New Bot\The New Bot\bin\Debug\netcoreapp3.1\Discord.Net.WebSocket.dll
+C:\Users\Chris\source\repos\The New Bot\The New Bot\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\Chris\source\repos\The New Bot\The New Bot\bin\Debug\netcoreapp3.1\System.Interactive.Async.dll
+C:\Users\Chris\source\repos\The New Bot\The New Bot\bin\Debug\netcoreapp3.1\System.Linq.Async.dll
+C:\Users\Chris\source\repos\The New Bot\The New Bot\obj\Debug\netcoreapp3.1\The New Bot.csproj.CopyComplete
+C:\Users\Chris\source\repos\The New Bot\The New Bot\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Chris\source\repos\The New Bot\The New Bot\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
