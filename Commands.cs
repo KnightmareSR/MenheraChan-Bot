@@ -125,7 +125,6 @@ namespace DiscordBot.Modules
         [Command("CT")]
         public async Task ChannelTopic() 
         {
-            IEnumerable<IMessage> messages = await Context.Channel.GetMessageAsync();
         }
 
 
