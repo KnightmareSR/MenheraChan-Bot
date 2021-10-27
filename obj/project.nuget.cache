@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "80k8iXlDQvqC/oVNXRJkP02t4LTHswsD2z8TCmxPxtgVmJ5zZ7y6Syi7FNlNDEmIootR/t3X/Ek2AfYfWUwUsA==",
+  "dgSpecHash": "Dv9t0ty7psyydl2VU85LJi+K7l11AiAgDWw5RbmItDN+7MK/VpeekgjxipDAYF8IJg60mPbZdFFzoZsV+rd8xg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Chris\\source\\repos\\The New Bot\\The New Bot\\The New Bot.csproj",
+  "projectFilePath": "C:\\Users\\Chris\\Documents\\GitHub\\MenheraChan-Bot\\The New Bot.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Chris\\.nuget\\packages\\discord.net\\2.4.0\\discord.net.2.4.0.nupkg.sha512",
     "C:\\Users\\Chris\\.nuget\\packages\\discord.net.commands\\2.4.0\\discord.net.commands.2.4.0.nupkg.sha512",
@@ -30,7 +30,8 @@
     "C:\\Users\\Chris\\.nuget\\packages\\system.runtime.extensions\\4.3.0\\system.runtime.extensions.4.3.0.nupkg.sha512",
     "C:\\Users\\Chris\\.nuget\\packages\\system.text.encoding\\4.3.0\\system.text.encoding.4.3.0.nupkg.sha512",
     "C:\\Users\\Chris\\.nuget\\packages\\system.threading\\4.3.0\\system.threading.4.3.0.nupkg.sha512",
-    "C:\\Users\\Chris\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512"
+    "C:\\Users\\Chris\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",
+    "C:\\Users\\Chris\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.19\\microsoft.netcore.app.host.win-x64.3.1.19.nupkg.sha512"
   ],
   "logs": []
 }

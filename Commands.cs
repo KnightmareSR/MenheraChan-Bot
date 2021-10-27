@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Discord;
@@ -20,7 +21,6 @@ namespace DiscordBot.Modules
 
 
 
-        //var _invite = await _server.CreateInvite(maxAge: null, maxUses: 25, tempMembership: false, withXkcd: false);
 
 
         [Command("Kick")]
@@ -41,9 +41,9 @@ namespace DiscordBot.Modules
 
             {
                 await user.KickAsync();
-                
+
             }
-            
+
 
             var EmbedBuilder = new EmbedBuilder()
 
@@ -93,6 +93,40 @@ namespace DiscordBot.Modules
         }
 
 
+
+
+
+        [Command("Invite")]
+        public async Task Invite(IGuildUser user = null)
+        {
+            var invites = await Context.Guild.GetInvitesAsync();
+            await ReplyAsync("  Here you go  " + invites.Select(x => x.Url).FirstOrDefault());
+        }
+
+
+
+        [Command("Prune")]
+
+        [RequireUserPermission(GuildPermission.ManageMessages, ErrorMessage = "Invalid Permission to prune!")]
+        public async Task Prune(int amount)
+        {
+
+
+
+            IEnumerable<IMessage> messages = await Context.Channel.GetMessagesAsync(amount + 1).FlattenAsync();
+            await ((ITextChannel)Context.Channel).DeleteMessagesAsync(messages);
+            const int delay = 3000;
+            IUserMessage m = await ReplyAsync($"I have deleted {amount} messages ");
+            await Task.Delay(delay);
+            await m.DeleteAsync();
+
+        }
+
+        [Command("CT")]
+        public async Task ChannelTopic() 
+        {
+            IEnumerable<IMessage> messages = await Context.Channel.GetMessageAsync();
+        }
 
 
         [Command("Ban")]
