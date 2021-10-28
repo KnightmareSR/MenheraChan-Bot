@@ -11,9 +11,49 @@ namespace DiscordBot.Modules
 {
     public class Commands : ModuleBase<SocketCommandContext>
     {
+        [Command("Stats")]
+        public async Task Stats() 
+        {
+            var embed = new EmbedBuilder();
+            embed.WithTitle("Menhera");
+            embed.AddField("Author", "Knightmare#1738");
+            embed.AddField("Zee", "Is a woman");
+            embed.AddField("Oolong", "WARZONE");
+            embed.AddField("@Skirlez#5521 ", "Fucks bananas");
+            embed.AddField("Jimmy", "Literally MrBeast");
+            embed.AddField("CLASSIC", "BOSHY");
+         //   embed.WithImageUrl("https://cdn.discordapp.com/attachments/860782626398666764/903084908891762728/capsule_616x353.png");
+            embed.ThumbnailUrl = "https://cdn.discordapp.com/emojis/701648252600320030.png?size=128";
+
+            embed.WithColor(Color.Blue);
+            await Context.Channel.SendMessageAsync("", false, embed.Build());
+
+
+        }
+
+
+        [Command("Help")]
+        public async Task Help() 
+        {
+            var embed = new EmbedBuilder();
+            embed.WithTitle("Bot Commands");
+            embed.WithDescription("Here are the current bot commands" );
+
+            embed.AddField("***.Prune***", "(Amount)", true);
+
+            embed.AddField(".Kick ", "(Member)");
+
+            embed.AddField(".Ban ", "(Member)");
+
+            embed.AddField(".Invite ", "To recieve an invite link");
 
 
 
+            embed.WithColor(Color.Blue);
+            await Context.Channel.SendMessageAsync("", false, embed.Build());
+
+
+        }
 
 
 
@@ -106,6 +146,7 @@ namespace DiscordBot.Modules
 
 
         [Command("Prune")]
+        [Summary("Mass Deletes Messages")]
 
         [RequireUserPermission(GuildPermission.ManageMessages, ErrorMessage = "Invalid Permission to prune!")]
         public async Task Prune(int amount)
