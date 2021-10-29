@@ -1,0 +1,6 @@
+﻿var audioService = new LavalinkNode(new LavalinkNodeOptions
+{
+    RestUri = "http://localhost:8080/",
+    WebSocketUri = "ws://localhost:8080/",
+    Password = "youshallnotpass"
+}, new DiscordClientWrapper(client));

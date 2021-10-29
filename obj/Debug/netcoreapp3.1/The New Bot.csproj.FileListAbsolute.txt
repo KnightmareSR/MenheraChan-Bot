@@ -47,3 +47,9 @@ C:\Users\Chris\Documents\GitHub\MenheraChan-Bot\obj\Debug\netcoreapp3.1\The New 
 C:\Users\Chris\Documents\GitHub\MenheraChan-Bot\obj\Debug\netcoreapp3.1\The New Bot.dll
 C:\Users\Chris\Documents\GitHub\MenheraChan-Bot\obj\Debug\netcoreapp3.1\The New Bot.pdb
 C:\Users\Chris\Documents\GitHub\MenheraChan-Bot\obj\Debug\netcoreapp3.1\The New Bot.genruntimeconfig.cache
+C:\Users\Chris\Documents\GitHub\MenheraChan-Bot\bin\Debug\netcoreapp3.1\Lavalink4NET.dll
+C:\Users\Chris\Documents\GitHub\MenheraChan-Bot\bin\Debug\netcoreapp3.1\Lavalink4NET.DiscordNet.dll
+C:\Users\Chris\Documents\GitHub\MenheraChan-Bot\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Chris\Documents\GitHub\MenheraChan-Bot\bin\Debug\netcoreapp3.1\System.Text.Encodings.Web.dll
+C:\Users\Chris\Documents\GitHub\MenheraChan-Bot\bin\Debug\netcoreapp3.1\System.Text.Json.dll
+C:\Users\Chris\Documents\GitHub\MenheraChan-Bot\bin\Debug\netcoreapp3.1\Victoria.dll

@@ -56,9 +56,17 @@
               "target": "Package",
               "version": "[2.4.0, )"
             },
+            "Lavalink4NET.Discord.NET": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
             "Microsoft.Extensions.DependencyInjection": {
               "target": "Package",
               "version": "[5.0.2, )"
+            },
+            "Victoria": {
+              "target": "Package",
+              "version": "[5.2.3, )"
             }
           },
           "imports": [

@@ -5,29 +5,38 @@ using System.Text;
 using System.Threading.Tasks;
 using Discord;
 using Discord.Commands;
+using Discord.WebSocket;
+using Lavalink4NET;
+using Lavalink4NET.DiscordNet;
+using Victoria;
 
 
 namespace DiscordBot.Modules
 {
     public class Commands : ModuleBase<SocketCommandContext>
     {
-        [Command("Stats")]
+        private DiscordShardedClient client;
+
+        [Command("About")]
         public async Task Stats() 
         {
             var embed = new EmbedBuilder();
             embed.WithTitle("Menhera");
             embed.AddField("Author", "Knightmare#1738");
-            embed.AddField("Zee", "Is a woman");
-            embed.AddField("Oolong", "WARZONE");
-            embed.AddField("@Skirlez#5521 ", "Fucks bananas");
-            embed.AddField("Jimmy", "Literally MrBeast");
-            embed.AddField("CLASSIC", "BOSHY");
+        
          //   embed.WithImageUrl("https://cdn.discordapp.com/attachments/860782626398666764/903084908891762728/capsule_616x353.png");
-            embed.ThumbnailUrl = "https://cdn.discordapp.com/emojis/701648252600320030.png?size=128";
+            embed.ThumbnailUrl = "https://cdn.discordapp.com/emojis/825202750321197086.gif?size=128";
 
             embed.WithColor(Color.Blue);
             await Context.Channel.SendMessageAsync("", false, embed.Build());
 
+
+        }
+
+        [Command("Play")]
+        public async Task Play() 
+        {
+        
 
         }
 

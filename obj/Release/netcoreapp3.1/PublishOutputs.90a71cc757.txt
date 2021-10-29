@@ -1,0 +1,15 @@
+C:\Users\Chris\Desktop\Password Manager\New folder\The New Bot.exe
+C:\Users\Chris\Desktop\Password Manager\New folder\The New Bot.dll
+C:\Users\Chris\Desktop\Password Manager\New folder\The New Bot.deps.json
+C:\Users\Chris\Desktop\Password Manager\New folder\The New Bot.runtimeconfig.json
+C:\Users\Chris\Desktop\Password Manager\New folder\The New Bot.pdb
+C:\Users\Chris\Desktop\Password Manager\New folder\Discord.Net.Commands.dll
+C:\Users\Chris\Desktop\Password Manager\New folder\Discord.Net.Core.dll
+C:\Users\Chris\Desktop\Password Manager\New folder\Discord.Net.Rest.dll
+C:\Users\Chris\Desktop\Password Manager\New folder\Discord.Net.Webhook.dll
+C:\Users\Chris\Desktop\Password Manager\New folder\Discord.Net.WebSocket.dll
+C:\Users\Chris\Desktop\Password Manager\New folder\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Chris\Desktop\Password Manager\New folder\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Chris\Desktop\Password Manager\New folder\Newtonsoft.Json.dll
+C:\Users\Chris\Desktop\Password Manager\New folder\System.Interactive.Async.dll
+C:\Users\Chris\Desktop\Password Manager\New folder\System.Linq.Async.dll

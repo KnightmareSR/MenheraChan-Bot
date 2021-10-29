@@ -8,7 +8,9 @@ using Discord.Commands;
 using Discord.WebSocket;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
-
+using Lavalink4NET;
+using Victoria;
+using Lavalink4NET.DiscordNet;
 
 namespace DiscordBot
 {
@@ -22,7 +24,7 @@ namespace DiscordBot
         private DiscordSocketClient _client;
         private CommandService _commands;
         private IServiceProvider _services;
-
+        private DiscordShardedClient client;
 
         public async Task RunBotAsync()
         {
@@ -63,6 +65,10 @@ namespace DiscordBot
         {
            _client.MessageReceived += HandleCommandAsync;
             await _commands.AddModulesAsync(Assembly.GetEntryAssembly(), _services);
+
+
+
+
         }
 
         private async Task HandleCommandAsync(SocketMessage messageParam)
@@ -91,6 +97,7 @@ namespace DiscordBot
                 services: null);
         }
 
+ 
 
 
 
