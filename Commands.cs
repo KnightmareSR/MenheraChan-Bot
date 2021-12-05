@@ -15,7 +15,27 @@ namespace DiscordBot.Modules
 {
     public class Commands : ModuleBase<SocketCommandContext>
     {
-        private DiscordShardedClient client;
+    
+        [Command("Poll")]
+        public async Task Poll(string emote, string emote2, string message)
+        {
+
+
+            var poll = new EmbedBuilder();
+            var emoji  = new Emoji(emote);
+            var emoji1 = new Emoji(emote2);
+            var author = Context.Message.Author;
+
+            poll.WithTitle($"{author} has started a poll vote below :page_with_curl: " );
+            poll.WithDescription(message);
+            poll.AddField($"Yes {emoji}", $"No {emoji1}");
+            poll.WithColor(Color.Blue);
+            
+            var sent = await Context.Channel.SendMessageAsync("", false, poll.Build());
+            await sent.AddReactionAsync(emoji);
+            await sent.AddReactionAsync(emoji1);
+            string [] options = message.Split(new char[] { '|' }, StringSplitOptions.RemoveEmptyEntries);
+        }
 
         [Command("About")]
         public async Task Stats() 
@@ -24,19 +44,12 @@ namespace DiscordBot.Modules
             embed.WithTitle("Menhera");
             embed.AddField("Author", "Knightmare#1738");
         
-         //   embed.WithImageUrl("https://cdn.discordapp.com/attachments/860782626398666764/903084908891762728/capsule_616x353.png");
-            embed.ThumbnailUrl = "https://cdn.discordapp.com/emojis/825202750321197086.gif?size=128";
+           // embed.WithImageUrl("https://cdn.discordapp.com/attachments/680096876842057738/916257377702006844/250.png");
+            embed.ThumbnailUrl = "https://cdn.discordapp.com/emojis/809322723720429580.gif?size=128";
 
             embed.WithColor(Color.Blue);
             await Context.Channel.SendMessageAsync("", false, embed.Build());
 
-
-        }
-
-        [Command("Play")]
-        public async Task Play() 
-        {
-        
 
         }
 
@@ -64,21 +77,11 @@ namespace DiscordBot.Modules
 
         }
 
-
-
-
-
-
-
-
-
         [Command("Kick")]
         [RequireUserPermission(GuildPermission.KickMembers, ErrorMessage = "Invalid Permission to kick this user!")]
 
         public async Task Kick(IGuildUser user, [Remainder] string reason = null)
         {
-
-
 
             if (user.GuildPermissions.KickMembers)
             {
@@ -90,7 +93,6 @@ namespace DiscordBot.Modules
 
             {
                 await user.KickAsync();
-
             }
 
 
@@ -100,36 +102,25 @@ namespace DiscordBot.Modules
             .WithFooter(footer =>
 
             {
-
-
                 footer
                 .WithText("User Kick Log");
-
-
-
             });
 
             Embed embed = EmbedBuilder.Build();
             await ReplyAsync(embed: embed);
 
-
             ITextChannel logChannel = Context.Client.GetChannel(838954527292915773) as ITextChannel;
 
             var EmbedBuilderLog = new EmbedBuilder()
-
 
          .WithDescription($"{user.Mention} Was Banned!\n**Reason** {reason}\n**Moderator** {Context.User.Mention}")
          .WithFooter(footer =>
 
 
-
          {
-
 
              footer
              .WithText("User Kick Log");
-
-
 
          });
 
@@ -141,15 +132,18 @@ namespace DiscordBot.Modules
 
         }
 
-
-
-
-
         [Command("Invite")]
-        public async Task Invite(IGuildUser user = null)
+        public async Task Invite()
         {
             var invites = await Context.Guild.GetInvitesAsync();
-            await ReplyAsync("  Here you go  " + invites.Select(x => x.Url).FirstOrDefault());
+            var giveInvite =  invites.Select(x => x.Url).FirstOrDefault();
+            var embed = new EmbedBuilder();
+
+            //   await ReplyAsync("  Here you go  " + invites.Select(x => x.Url).FirstOrDefault());
+
+            embed.AddField("", await ReplyAsync( giveInvite, true));
+            embed.WithColor(Color.Blue);
+            await Context.Channel.SendMessageAsync("Hello", false, embed.Build());
         }
 
 
@@ -224,15 +218,10 @@ namespace DiscordBot.Modules
          .WithDescription($"{user.Mention} Was Banned!\n**Reason** {reason}\n**Moderator** {Context.User.Mention}")
          .WithFooter(footer =>
 
-
-
          {
-
 
              footer
              .WithText("User Ban Log");
-
-
 
          });
 
@@ -240,46 +229,7 @@ namespace DiscordBot.Modules
             await
             logChannel.SendMessageAsync(embed: embedLog);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     }
 }
