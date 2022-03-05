@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Chris\\Desktop\\MenheraChan-Bot-main\\The New Bot.csproj": {}
+    "C:\\Users\\Chris\\Documents\\GitHub\\MenheraChan-Bot\\The New Bot.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Chris\\Desktop\\MenheraChan-Bot-main\\The New Bot.csproj": {
+    "C:\\Users\\Chris\\Documents\\GitHub\\MenheraChan-Bot\\The New Bot.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Chris\\Desktop\\MenheraChan-Bot-main\\The New Bot.csproj",
+        "projectUniqueName": "C:\\Users\\Chris\\Documents\\GitHub\\MenheraChan-Bot\\The New Bot.csproj",
         "projectName": "The New Bot",
-        "projectPath": "C:\\Users\\Chris\\Desktop\\MenheraChan-Bot-main\\The New Bot.csproj",
+        "projectPath": "C:\\Users\\Chris\\Documents\\GitHub\\MenheraChan-Bot\\The New Bot.csproj",
         "packagesPath": "C:\\Users\\Chris\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Chris\\Desktop\\MenheraChan-Bot-main\\obj\\",
+        "outputPath": "C:\\Users\\Chris\\Documents\\GitHub\\MenheraChan-Bot\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -45,6 +45,10 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "Discord.Addons.ShukaInteractive": {
+              "target": "Package",
+              "version": "[1.1.1, )"
+            },
             "Discord.Net": {
               "target": "Package",
               "version": "[2.4.0, )"
@@ -57,17 +61,25 @@
               "target": "Package",
               "version": "[2.4.0, )"
             },
+            "Discord.Net.Rest": {
+              "target": "Package",
+              "version": "[2.4.0, )"
+            },
             "Lavalink4NET.Discord.NET": {
               "target": "Package",
               "version": "[2.1.0, )"
             },
             "Microsoft.Extensions.DependencyInjection": {
               "target": "Package",
-              "version": "[5.0.2, )"
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[6.0.0, )"
             },
             "Victoria": {
               "target": "Package",
-              "version": "[5.2.3, )"
+              "version": "[5.2.4, )"
             }
           },
           "imports": [

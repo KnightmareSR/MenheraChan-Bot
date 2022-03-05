@@ -17,12 +17,12 @@ namespace DiscordBot.Modules
     {
     
         [Command("Poll")]
-        public async Task Poll(string emote, string emote2, string message)
+        public async Task Poll(string emote, string emote2, string message = null)
         {
 
 
             var poll = new EmbedBuilder();
-            var emoji  = new Emoji(emote);
+            var emoji = Emote.Parse(emote);
             var emoji1 = new Emoji(emote2);
             var author = Context.Message.Author;
 
@@ -34,21 +34,38 @@ namespace DiscordBot.Modules
             var sent = await Context.Channel.SendMessageAsync("", false, poll.Build());
             await sent.AddReactionAsync(emoji);
             await sent.AddReactionAsync(emoji1);
-            string [] options = message.Split(new char[] { '|' }, StringSplitOptions.RemoveEmptyEntries);
+         //   string [] options = message.Split(new char[] { '|' }, StringSplitOptions.RemoveEmptyEntries);
+        }
+
+
+        [Command("Request")]
+        public async Task Request(string gameName, string platform, string imageURL = null) 
+        {
+            var embed = new EmbedBuilder();
+            embed.WithTitle(gameName);
+            embed.AddField($"Platform: {platform}", " ");
+            embed.ThumbnailUrl = $"{imageURL}";
+            embed.WithColor(Color.Blue);
+            await Context.Channel.SendMessageAsync("", false, embed.Build());
+
+
+
         }
 
         [Command("About")]
         public async Task Stats() 
         {
+           // embed.WithImageUrl("https://cdn.discordapp.com/attachments/680096876842057738/916257377702006844/250.png");
+            
             var embed = new EmbedBuilder();
             embed.WithTitle("Menhera");
             embed.AddField("Author", "Knightmare#1738");
-        
-           // embed.WithImageUrl("https://cdn.discordapp.com/attachments/680096876842057738/916257377702006844/250.png");
             embed.ThumbnailUrl = "https://cdn.discordapp.com/emojis/809322723720429580.gif?size=128";
-
             embed.WithColor(Color.Blue);
             await Context.Channel.SendMessageAsync("", false, embed.Build());
+
+        
+
 
 
         }

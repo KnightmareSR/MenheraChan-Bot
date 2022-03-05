@@ -37,7 +37,7 @@ namespace DiscordBot
 
             //Channel Token
 
-            string token = "ODM4NTU3MTIxMzk3MTI5Mjg2.YI81LQ.pffaVlKiPqgoI1aB72Xs6DEH1yk";
+            string token = "OTE2OTE1NTc3NzcwMTEwOTg2.YaxGLQ.9LfRK9f7Hwf6wZUEuXQpTYg5vh0";
 
 
             _client.Log += _client_Log;
