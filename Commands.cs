@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Immutable;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,57 +17,127 @@ namespace DiscordBot.Modules
 {
     public class Commands : ModuleBase<SocketCommandContext>
     {
-    
+        private async Task HandlecommandAsync(SocketMessage msg)
+        {
+            var message = msg as SocketUserMessage;
+            var blacklistedWords = new List<string>();
+      
+            blacklistedWords.Add("Free discord nitro");
+
+            msg.ToString().ToLower();
+
+
+            if (message.Content.Contains(blacklistedWords.FirstOrDefault()))
+            {
+                await message.DeleteAsync();
+                await message.Author.SendMessageAsync("Hello");
+            }
+
+
+        }
+
+        [Command("..bred")]
+        public async Task Bred()
+        {
+            List<string> bred = new List<string>();
+            bred.Add("");
+            bred.Add("");
+            bred.Add("");
+            bred.Add("");
+
+            Random rnd = new Random();
+            int index = rnd.Next(bred.Count);
+            await ReplyAsync($"{ bred[index]}");
+
+        }
+
+        [Command("..toad")]
+        public async Task Toad() 
+        {
+            #region 
+            List<string> toad = new List<string>();
+            toad.Add("");
+            toad.Add("");
+            toad.Add(""); 
+            Random rnd = new Random();
+            int index = rnd.Next(toad.Count);
+            await ReplyAsync($"{ toad[index]}");
+
+            #endregion
+        }
+
+
+        [Command("Fumo")]
+        public async Task Fumo() 
+        {
+            #region  
+            List<string> fumoGifs = new List<string>();
+            fumoGifs.Add("https://tenor.com/view/rei-ayanami-plush-fumo-gif-24291059");
+            fumoGifs.Add("https://tenor.com/view/touhou-fumo-touhou-fumo-plush-gif-23217054");
+            fumoGifs.Add("https://tenor.com/view/yuyuko-fumo-touhou-doll-plush-gif-20972293");
+            fumoGifs.Add("https://tenor.com/view/touhou-ok-and-cirno-gif-22104990");
+            fumoGifs.Add("https://tenor.com/view/fumo-touhou-fumo-fumo-plush-yuyuko-fumo-yuyuko-gif-23084836");
+            fumoGifs.Add("https://tenor.com/view/patchouli-knowledge-patchy-fumo-fumofumo-bop-gif-23498405");
+            fumoGifs.Add("https://tenor.com/view/touhou-fumo-cirno-fumo-murasa-fumo-cirno-murasa-murasa-gif-22948388");
+            fumoGifs.Add("https://cdn.discordapp.com/attachments/680096876842057738/857072623552299038/1447139527086.gif");
+            fumoGifs.Add("https://tenor.com/view/cirno-cirno-fumo-fumo-gif-21728275");
+            fumoGifs.Add("https://tenor.com/view/fumo-fumo-touhou-fumo-plush-touhou-flandre-gif-24379735");
+            fumoGifs.Add("https://tenor.com/view/touhou-fumo-flandre-generator-gif-19559237");
+            fumoGifs.Add("https://cdn.discordapp.com/attachments/861040876264226827/861041003082940416/video0.mp4");
+            fumoGifs.Add("https://tenor.com/view/hakurei-reimu-fumo-fumo-fumo-fumo-doll-el-transporte-gif-20650216");
+            #endregion
+            Random rnd = new Random();
+            int index = rnd.Next(fumoGifs.Count);
+            await ReplyAsync($"{ fumoGifs[index]}");
+
+            Console.WriteLine($"{ fumoGifs.Count.ToString()} fumos");
+
+
+
+        }
+
+        [Command("..Musolini")]
+        public async Task Fish() 
+        {
+            ReplyAsync("https://cdn.discordapp.com/attachments/789209817474269184/921092264623759400/musolinni_feesh_1.mp4");
+        }
+
+
+       
+
         [Command("Poll")]
-        public async Task Poll(string emote, string emote2, string message = null)
+        public async Task Poll(  string emote, string emote2,  params String[] message)
         {
 
 
+            var readable = string.Join(" ", message);
             var poll = new EmbedBuilder();
-            var emoji = Emote.Parse(emote);
+            var emoji = new Emoji(emote);
             var emoji1 = new Emoji(emote2);
             var author = Context.Message.Author;
 
-            poll.WithTitle($"{author} has started a poll vote below :page_with_curl: " );
-            poll.WithDescription(message);
+            poll.WithTitle($"{author} has started a poll vote below :page_with_curl: ");
+            poll.WithDescription(readable);
             poll.AddField($"Yes {emoji}", $"No {emoji1}");
             poll.WithColor(Color.Blue);
-            
             var sent = await Context.Channel.SendMessageAsync("", false, poll.Build());
             await sent.AddReactionAsync(emoji);
             await sent.AddReactionAsync(emoji1);
-         //   string [] options = message.Split(new char[] { '|' }, StringSplitOptions.RemoveEmptyEntries);
-        }
-
-
-        [Command("Request")]
-        public async Task Request(string gameName, string platform, string imageURL = null) 
-        {
-            var embed = new EmbedBuilder();
-            embed.WithTitle(gameName);
-            embed.AddField($"Platform: {platform}", " ");
-            embed.ThumbnailUrl = $"{imageURL}";
-            embed.WithColor(Color.Blue);
-            await Context.Channel.SendMessageAsync("", false, embed.Build());
-
-
 
         }
-
+       
         [Command("About")]
         public async Task Stats() 
         {
-           // embed.WithImageUrl("https://cdn.discordapp.com/attachments/680096876842057738/916257377702006844/250.png");
-            
             var embed = new EmbedBuilder();
             embed.WithTitle("Menhera");
             embed.AddField("Author", "Knightmare#1738");
+        
+           // embed.WithImageUrl("https://cdn.discordapp.com/attachments/680096876842057738/916257377702006844/250.png");
             embed.ThumbnailUrl = "https://cdn.discordapp.com/emojis/809322723720429580.gif?size=128";
+
             embed.WithColor(Color.Blue);
             await Context.Channel.SendMessageAsync("", false, embed.Build());
-
-        
-
 
 
         }
@@ -75,8 +147,10 @@ namespace DiscordBot.Modules
         public async Task Help() 
         {
             var embed = new EmbedBuilder();
+            var author = Context.Message.Author;
+
             embed.WithTitle("Bot Commands");
-            embed.WithDescription("Here are the current bot commands" );
+            embed.WithDescription($" {author} Here are the current bot commands" );
 
             embed.AddField("***.Prune***", "(Amount)", true);
 
@@ -171,8 +245,6 @@ namespace DiscordBot.Modules
         [RequireUserPermission(GuildPermission.ManageMessages, ErrorMessage = "Invalid Permission to prune!")]
         public async Task Prune(int amount)
         {
-
-
 
             IEnumerable<IMessage> messages = await Context.Channel.GetMessagesAsync(amount + 1).FlattenAsync();
             await ((ITextChannel)Context.Channel).DeleteMessagesAsync(messages);

@@ -37,7 +37,10 @@ namespace DiscordBot
 
             //Channel Token
 
+            //Invite Link https://discord.com/oauth2/authorize?client_id=916915577770110986&permissions=8&scope=bot
+
             string token = "OTE2OTE1NTc3NzcwMTEwOTg2.YaxGLQ.9LfRK9f7Hwf6wZUEuXQpTYg5vh0";
+
 
 
             _client.Log += _client_Log;
@@ -63,7 +66,7 @@ namespace DiscordBot
 
         public async Task RegisterCommandsAsync()
         {
-           _client.MessageReceived += HandleCommandAsync;
+            _client.MessageReceived += HandleCommandAsync;
             await _commands.AddModulesAsync(Assembly.GetEntryAssembly(), _services);
 
 
@@ -95,11 +98,17 @@ namespace DiscordBot
                 context: context,
                 argPos: argPos,
                 services: null);
+
+
+
+
+
         }
 
- 
+       
 
 
 
     }
+
 }

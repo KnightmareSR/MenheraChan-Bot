@@ -39,6 +39,7 @@ C:\Users\Chris\Documents\GitHub\MenheraChan-Bot\bin\Debug\netcoreapp3.1\Newtonso
 C:\Users\Chris\Documents\GitHub\MenheraChan-Bot\bin\Debug\netcoreapp3.1\System.Interactive.Async.dll
 C:\Users\Chris\Documents\GitHub\MenheraChan-Bot\bin\Debug\netcoreapp3.1\System.Linq.Async.dll
 C:\Users\Chris\Documents\GitHub\MenheraChan-Bot\obj\Debug\netcoreapp3.1\The New Bot.csproj.AssemblyReference.cache
+C:\Users\Chris\Documents\GitHub\MenheraChan-Bot\obj\Debug\netcoreapp3.1\The New Bot.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Chris\Documents\GitHub\MenheraChan-Bot\obj\Debug\netcoreapp3.1\The New Bot.AssemblyInfoInputs.cache
 C:\Users\Chris\Documents\GitHub\MenheraChan-Bot\obj\Debug\netcoreapp3.1\The New Bot.AssemblyInfo.cs
 C:\Users\Chris\Documents\GitHub\MenheraChan-Bot\obj\Debug\netcoreapp3.1\The New Bot.csproj.CoreCompileInputs.cache
@@ -82,38 +83,3 @@ C:\Users\Chris\Desktop\MenheraChan-Bot-main\obj\Debug\netcoreapp3.1\The New Bot.
 C:\Users\Chris\Desktop\MenheraChan-Bot-main\obj\Debug\netcoreapp3.1\The New Bot.dll
 C:\Users\Chris\Desktop\MenheraChan-Bot-main\obj\Debug\netcoreapp3.1\The New Bot.pdb
 C:\Users\Chris\Desktop\MenheraChan-Bot-main\obj\Debug\netcoreapp3.1\The New Bot.genruntimeconfig.cache
-C:\Users\Chris\Documents\GitHub\MenheraChan-Bot\bin\Debug\netcoreapp3.1\Discord.Addons.Interactive.dll
-C:\Users\Chris\Documents\GitHub\MenheraChan-Bot\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
-C:\Users\Chris\Documents\GitHub\MenheraChan-Bot\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
-C:\Users\Chris\Documents\GitHub\MenheraChan-Bot\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
-C:\Users\Chris\Documents\GitHub\MenheraChan-Bot\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.CommandLine.dll
-C:\Users\Chris\Documents\GitHub\MenheraChan-Bot\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
-C:\Users\Chris\Documents\GitHub\MenheraChan-Bot\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.FileExtensions.dll
-C:\Users\Chris\Documents\GitHub\MenheraChan-Bot\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Json.dll
-C:\Users\Chris\Documents\GitHub\MenheraChan-Bot\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.UserSecrets.dll
-C:\Users\Chris\Documents\GitHub\MenheraChan-Bot\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Abstractions.dll
-C:\Users\Chris\Documents\GitHub\MenheraChan-Bot\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Physical.dll
-C:\Users\Chris\Documents\GitHub\MenheraChan-Bot\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileSystemGlobbing.dll
-C:\Users\Chris\Documents\GitHub\MenheraChan-Bot\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Hosting.dll
-C:\Users\Chris\Documents\GitHub\MenheraChan-Bot\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Hosting.Abstractions.dll
-C:\Users\Chris\Documents\GitHub\MenheraChan-Bot\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
-C:\Users\Chris\Documents\GitHub\MenheraChan-Bot\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
-C:\Users\Chris\Documents\GitHub\MenheraChan-Bot\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Configuration.dll
-C:\Users\Chris\Documents\GitHub\MenheraChan-Bot\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Console.dll
-C:\Users\Chris\Documents\GitHub\MenheraChan-Bot\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Debug.dll
-C:\Users\Chris\Documents\GitHub\MenheraChan-Bot\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.EventLog.dll
-C:\Users\Chris\Documents\GitHub\MenheraChan-Bot\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.EventSource.dll
-C:\Users\Chris\Documents\GitHub\MenheraChan-Bot\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
-C:\Users\Chris\Documents\GitHub\MenheraChan-Bot\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.ConfigurationExtensions.dll
-C:\Users\Chris\Documents\GitHub\MenheraChan-Bot\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
-C:\Users\Chris\Documents\GitHub\MenheraChan-Bot\bin\Debug\netcoreapp3.1\Microsoft.Win32.Registry.dll
-C:\Users\Chris\Documents\GitHub\MenheraChan-Bot\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
-C:\Users\Chris\Documents\GitHub\MenheraChan-Bot\bin\Debug\netcoreapp3.1\System.Diagnostics.EventLog.dll
-C:\Users\Chris\Documents\GitHub\MenheraChan-Bot\bin\Debug\netcoreapp3.1\System.Security.AccessControl.dll
-C:\Users\Chris\Documents\GitHub\MenheraChan-Bot\bin\Debug\netcoreapp3.1\System.Security.Principal.Windows.dll
-C:\Users\Chris\Documents\GitHub\MenheraChan-Bot\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\Microsoft.Win32.Registry.dll
-C:\Users\Chris\Documents\GitHub\MenheraChan-Bot\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Diagnostics.EventLog.Messages.dll
-C:\Users\Chris\Documents\GitHub\MenheraChan-Bot\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Diagnostics.EventLog.dll
-C:\Users\Chris\Documents\GitHub\MenheraChan-Bot\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Security.AccessControl.dll
-C:\Users\Chris\Documents\GitHub\MenheraChan-Bot\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
-C:\Users\Chris\Documents\GitHub\MenheraChan-Bot\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
