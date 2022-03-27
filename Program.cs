@@ -8,9 +8,7 @@ using Discord.Commands;
 using Discord.WebSocket;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
-using Lavalink4NET;
-using Victoria;
-using Lavalink4NET.DiscordNet;
+
 
 namespace DiscordBot
 {

@@ -11,17 +11,20 @@ using Discord.WebSocket;
 using Lavalink4NET;
 using Lavalink4NET.DiscordNet;
 using Victoria;
-
+using Newtonsoft.Json;
 
 namespace DiscordBot.Modules
 {
     public class Commands : ModuleBase<SocketCommandContext>
     {
+
+
+
         private async Task HandlecommandAsync(SocketMessage msg)
         {
             var message = msg as SocketUserMessage;
             var blacklistedWords = new List<string>();
-      
+
             blacklistedWords.Add("Free discord nitro");
 
             msg.ToString().ToLower();
@@ -51,24 +54,9 @@ namespace DiscordBot.Modules
 
         }
 
-        [Command("..toad")]
-        public async Task Toad() 
-        {
-            #region 
-            List<string> toad = new List<string>();
-            toad.Add("");
-            toad.Add("");
-            toad.Add(""); 
-            Random rnd = new Random();
-            int index = rnd.Next(toad.Count);
-            await ReplyAsync($"{ toad[index]}");
-
-            #endregion
-        }
-
 
         [Command("Fumo")]
-        public async Task Fumo() 
+        public async Task Fumo()
         {
             #region  
             List<string> fumoGifs = new List<string>();
@@ -90,19 +78,41 @@ namespace DiscordBot.Modules
             int index = rnd.Next(fumoGifs.Count);
             await ReplyAsync($"{ fumoGifs[index]}");
 
-            Console.WriteLine($"{ fumoGifs.Count.ToString()} fumos");
+            Console.WriteLine($"{ fumoGifs.Count.ToString()} total fumos");
 
 
 
         }
 
-        [Command("..Musolini")]
-        public async Task Fish() 
+        [Command("Message")]
+        public async Task SendMSG(params String[] message)
         {
-            ReplyAsync("https://cdn.discordapp.com/attachments/789209817474269184/921092264623759400/musolinni_feesh_1.mp4");
+            var readable = string.Join(" ", message);
+            await ReplyAsync(readable);
         }
 
 
+        [Command("User")]
+        public async Task userInfo(SocketUser user) 
+        {
+           
+            
+
+           var avi = user.GetAvatarUrl();
+           var created = user.CreatedAt;
+            var embed = new EmbedBuilder();
+            var activ = user.Status;
+
+            embed.ThumbnailUrl = avi;
+            embed.WithTitle("User info ");
+            embed.WithDescription($"{user.Mention}  Profile Info ");
+            embed.AddField($" {created} ", "Date Created ", true);
+            embed.AddField($"User is {activ} ", " Status", false);
+            embed.WithColor(Color.Blue);
+         
+            var sent = await Context.Channel.SendMessageAsync("", false, embed.Build());
+
+        }
        
 
         [Command("Poll")]
@@ -256,8 +266,9 @@ namespace DiscordBot.Modules
         }
 
         [Command("CT")]
-        public async Task ChannelTopic() 
+        public async Task ChannelTopic(IChannel channel) 
         {
+           
         }
 
 
