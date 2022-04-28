@@ -12,6 +12,9 @@ using Newtonsoft.Json.Serialization;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
+using Discord.Interactions;
+
+
 
 namespace The_New_Bot
 {
@@ -19,44 +22,61 @@ namespace The_New_Bot
     {
 
 
-        [Command("request")]
-        public async Task Request(params String[] requestItem)
+        DiscordSocketClient client;
+
+        public async Task MainAsync() 
         {
+           // client.ButtonExecuted += MyButtonHandler;
 
-
-            var path =  @"C:\Users\Chris\Desktop\request.json";
-           
             
-            
-            List<string> item = new List<string>();
-            var readable = string.Join(" ", requestItem);
-            item.Add(readable);
 
-
-            ReplyAsync($"{readable} has been added ");
-
-        
-
-            int count = item.Count();
-
-            for (int i = 0; i < count; i++)
-            {
-
-                ReplyAsync(item[i].ToString());
-            }
-
-            Todo todo = JsonConvert.DeserializeObject<Todo>(path);
-
-            todo.item.ToString();
-            Console.WriteLine(todo);
-            Console.WriteLine(path);
         }
 
+
+
+        [Command("request")]
+        public async Task Request(  params String[] requestItem)
+        {
+
+            
+            
+
+            var builder = new ComponentBuilder()
+                .WithButton("Accept", "accept-button");
+
+           await ReplyAsync("Click to accept button", components: builder.Build());
+
+
+
+
+
+        }
+
+
+
+    /*    private async Task HandleInteractionCreated(SocketInteraction interaction)
+        {
+            switch (interaction.Type)
+            {
+                case InteractionType.ApplicationCommand:
+                    //Handle SlashCommands
+                    break;
+                case InteractionType.ApplicationCommandAutocomplete:
+                    //Handle Autocomplete
+                    break;
+                case InteractionType.MessageComponent:
+                 //   MessageComponentHandlingService.MessageComponentHandler(interaction)
+                    break;
+                default: // We dont support it
+                    Console.WriteLine("Unsupported interaction type: " + interaction.Type);
+                    break;
+            }
+        }
+    */
+
     }
 
-    public class Todo 
-    { 
-        public int item { get; set; }
-        public bool complete { get; set; }
-    }
+
+
+
 }
